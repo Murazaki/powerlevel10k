@@ -81,6 +81,7 @@
     context                 # user@hostname
     nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
     ranger                  # ranger shell (https://github.com/ranger/ranger)
+    yazi                    # yazi shell (https://github.com/sxyazi/yazi)
     nnn                     # nnn shell (https://github.com/jarun/nnn)
     lf                      # lf shell (https://github.com/gokcehan/lf)
     xplr                    # xplr shell (https://github.com/sayanarijit/xplr)
@@ -275,10 +276,6 @@
   # Can also be handy when the directory is shortened, as it allows you to see
   # the full directory that was used in previous commands.
   typeset -g POWERLEVEL9K_DIR_HYPERLINK=false
-
-  # Enable special styling for non-writable directories. See POWERLEVEL9K_LOCK_ICON and
-  # POWERLEVEL9K_DIR_CLASSES below.
-  typeset -g POWERLEVEL9K_DIR_SHOW_WRITABLE=v2
 
   # Enable special styling for non-writable and non-existent directories. See POWERLEVEL9K_LOCK_ICON
   # and POWERLEVEL9K_DIR_CLASSES below.
@@ -723,6 +720,12 @@
   typeset -g POWERLEVEL9K_RANGER_FOREGROUND=3
   # Custom icon.
   # typeset -g POWERLEVEL9K_RANGER_VISUAL_IDENTIFIER_EXPANSION='⭐'
+  
+  ####################[ yazi: yazi shell (https://github.com/sxyazi/yazi) ]#####################
+  # Yazi shell color.
+  typeset -g POWERLEVEL9K_YAZI_FOREGROUND=3
+  # Custom icon.
+  # typeset -g POWERLEVEL9K_YAZI_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
   ######################[ nnn: nnn shell (https://github.com/jarun/nnn) ]#######################
   # Nnn shell color.
@@ -1348,7 +1351,7 @@
   #[ aws: aws profile (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) ]#
   # Show aws only when the command you are typing invokes one of these tools.
   # Tip: Remove the next line to always show aws.
-  typeset -g POWERLEVEL9K_AWS_SHOW_ON_COMMAND='aws|awless|terraform|pulumi|terragrunt'
+  typeset -g POWERLEVEL9K_AWS_SHOW_ON_COMMAND='aws|awless|cdk|terraform|pulumi|terragrunt'
 
   # POWERLEVEL9K_AWS_CLASSES is an array with even number of elements. The first element
   # in each pair defines a pattern against which the current AWS profile gets matched.
